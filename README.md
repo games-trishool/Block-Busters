@@ -1,45 +1,51 @@
-# Block Busters — enhanced grid puzzle v1.2.0
+# Block Busters — Crystal Edition v1.3.0
 
-[Download enhanced browser ZIP](https://github.com/games-trishool/Block-Busters/raw/refs/heads/downloads/block-busters-enhanced-v1.2.zip)
+[Download the updated browser ZIP](https://github.com/games-trishool/Block-Busters/raw/refs/heads/downloads/block-busters-crystal-v1.3.zip)
 
-The existing8×8 grid-and-piece game now has a redesigned indigo home/gameUI,
-tactile beveled cubes, a milestone bar, animated scores, and row/column blasts.
-Rendering uses a shared96px tile atlas with bounded effects and retained caches.
-This keeps the existing three-piece placement gameplay.
+Glossy faceted crystal blocks now reflect light, and completed rows or columns
+shatter into rotating glass fragments with crystal sound effects. The home,
+game and settings screens have a deeper jewel-colored finish and glass panels.
+Original gentle background music loops quietly, with its own saved ON/OFF switch
+in Settings. Sound effects and vibration are independent settings.
 
-## Run in VS Code
+The existing endless 8×8, three-piece placement rules are preserved.
 
-1. Stop any old game server with **Ctrl+C**.
-2. Extract the new ZIP into a **new folder**.
+## Open in VS Code
+
+1. Stop the old game server with **Ctrl+C**.
+2. Extract this ZIP into a **new folder**.
 3. Open the extracted **Block-Busters** folder in VS Code.
-4. With Node.js18+ installed, run:
+4. With Node.js 18+ installed, run:
 
 ```sh
 npm start
 ```
 
 Open the terminal's address. No npm install or Godot installation is required
-to play the prebuilt browser version. Source and rebuild instructions are included.
+for the included browser game. To test on a phone, forward port 5173 in VS Code
+and use the HTTPS forwarded address. Music begins after your first tap.
 
-## Actual refreshed UI
+## Actual game previews
 
-![Enhanced home](home-preview.png)
+![Crystal home](home-preview.png)
 
-![Enhanced game](puzzle-preview.png)
+![Crystal game](puzzle-preview.png)
 
-![Horizontal blast](blast-preview.png)
+![Glass shatter](blast-preview.png)
+
+![Music and sound settings](settings-preview.png)
 
 ## Validation
 
-90 gameplay/app/touch checks passed. Rendering cache/effect stress checks
-passed51 checks across40 row clears. Actual browser placement, blast,
-settings and pause/resume passed without runtime errors.
+130 Godot gameplay, app, touch, crystal rendering and audio checks pass.
+Browser tests verified a real line clear on desktop and phone-size touch
+emulation, actual music output after a gesture, independent effects/music
+switches, silence with music OFF, and saved OFF behavior after reload.
+The extracted ZIP starts with npm start and serves the browser build correctly.
 
-Rendering targets60FPS. In the same480×900 softwareChromium benchmark,
-observed frame cadence improved9.29→22.80FPS idle and8.49→18.68FPS dragging.
-These software-renderer measurements do not guarantee physical-device FPS.
-See docs/PERFORMANCE.md inside the ZIP for methodology and limits.
-Android1.2.0/code3 packages were rebuilt and validated in the cloud workspace;
-the Play bundle still needs the developer upload signature and device testing.
+Rendering targets 60 FPS, with a shared crystal texture atlas, cached interface
+textures and bounded effects. Physical-phone frame rate remains unmeasured.
+Android v1.3.0/code4 debug APK and unsigned AAB were rebuilt and validated in
+the cloud workspace. Private signing and device testing are still needed for Play.
 
-ZIP SHA-256: `6460097c7796123a261093a67b5a95a7ab37fd3a3f86f6c2495f5dd59a6bd950`
+ZIP SHA-256: `093a87e856f8c37e30d84424206425953120dd243a2a84febef8d767a0bb0cfe`
